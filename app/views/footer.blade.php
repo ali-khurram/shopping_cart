@@ -7,4 +7,4 @@
 <!-- Scripts are placed here -->
 {{ HTML::script('components/js/jquery.min.js') }}
 {{ HTML::script('components/bootstrap/js/bootstrap.min.js') }}
-{{ HTML::script('components/js/general.js') }}
+{{ HTML::script('components/js/pages.js') }}

@@ -16,13 +16,12 @@ class BaseController extends Controller {
 	}
         
         // Default metas
-
         protected function metas()
         {
-            $this->layout->title = 'Santander';
-            $this->layout->site = 'Enterprise Portal';
-            $this->layout->description = 'A dedicated tool for the university, start-up and small business communities';
-            $this->layout->keywords = 'santander, universities, start-up, business, communities, portal, tool';
+            $this->layout->title = 'Shopping Cart';
+            $this->layout->site = 'Skeleton site for shopping cart';
+            $this->layout->description = 'A cart that fulfills required criteria';
+            $this->layout->keywords = 'shopping, cart, ecommerce';
         }
 
 }

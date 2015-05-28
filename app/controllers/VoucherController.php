@@ -1,25 +1,35 @@
 <?php
 
 class VoucherController extends BaseController {
+    
+        /**
+	 * Define default view for blade template
+	 *
+	 */
         protected $layout = 'layouts.default';
-
+        
+        
+        /**
+	 * Apply voucher code to the cart/basket
+         * 
+	 */
 	public function addVoucher()
 	{         
             $orderDetails = Input::all();
             $error = FALSE;
             $voucher = Voucher::where('code', $orderDetails['voucher_code'])->first();
             
-            if($voucher == NULL) {
+            if(!$voucher) {
                 $message = "Invalid Voucher Code";
                 $error = TRUE;
             }
             
             $orderItems = OrderItem::with('products')
-                    ->where('orderId', $orderDetails['orderId'])->get();
+                            ->where('orderId', $orderDetails['orderId'])->get();
             
             $variables = array('items' => $orderItems,
-                        'order_id' => $orderDetails['orderId'],
-                        'code' => $orderDetails['voucher_code']);
+                               'order_id' => $orderDetails['orderId'],
+                               'code' => $orderDetails['voucher_code']);
                         
             if(!$error) {
                 $discount = $this->voucher_evalautor($voucher, $orderItems);
@@ -36,6 +46,13 @@ class VoucherController extends BaseController {
             $this->layout->content = View::make('cart.index')->with($variables);
         }
         
+        /**
+	 * Evaluate the discount value of the voucher on the ordered items
+         * 
+         * @param  object,object  $voucher,$orderItems   Voucher object to be applied
+         *                                               on items in the cart
+         * @return int  $discount    Return the discount applied amount
+	 */        
         protected function voucher_evalautor($voucher, $orderItems) {
             $cart_total = 0.00;
             $check = TRUE;
