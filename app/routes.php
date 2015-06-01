@@ -28,10 +28,3 @@ Route::group(array('prefix' => '/basket'), function() {
     
     Route::post('/checkout', 'CartController@checkout');
 });
-
-Route::get('/voucher', function(){
-    $v = Category::all();
-    foreach($v as $code) {
-        var_dump($code->name);
-    }
-});
