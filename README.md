@@ -21,7 +21,7 @@ Now all you have to do is point the virtual host to this path `shopping_cart/pub
 
 Now you're ready to use shopping cart application.
 
-## Overview of my approach
+## Overview
 
 
 Generally, for building a shopping cart, the order is first created within a temporary table also called session holding table, and real order is only created along with ordering quantity update once payment is confirmed. 
@@ -30,5 +30,3 @@ As there is no payment method included, I presumed all orders are complete as I 
 
 As the purpose of this application is to fulfill the priority list and with the limited time frame available, I had to focus on minimum functionality to achieve the target result.
 The application mainly comprises of two pages, "Product Listing" and "My Cart".
-
-## Understanding the Functionality
