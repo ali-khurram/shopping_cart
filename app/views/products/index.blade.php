@@ -19,7 +19,7 @@
             </form>
         </div>
         <div class="pull-right">
-            <a href="{{ ($orderId != NULL) ? ("/basket/".$orderId) : "#" }}" class="btn btn-primary"><span>{{ $items }}</span> items in basket</a>
+            <a href="{{ ($orderId) ? ("/basket/".$orderId) : "#" }}" class="btn btn-primary"><span>{{ $items }}</span> items in basket</a>
         </div>
     </div>
     <div class="row">

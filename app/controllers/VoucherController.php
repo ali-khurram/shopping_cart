@@ -13,7 +13,7 @@ class VoucherController extends BaseController {
 	 * Apply voucher code to the cart/basket
          * 
 	 */
-	public function addVoucher()
+	public function applyVoucher()
 	{         
             $orderDetails = Input::all();
             $error = FALSE;
@@ -29,6 +29,7 @@ class VoucherController extends BaseController {
             
             $variables = array('items' => $orderItems,
                                'order_id' => $orderDetails['orderId'],
+                               'total' => $this->calculateTotal($orderItems),
                                'code' => $orderDetails['voucher_code']);
                         
             if(!$error) {

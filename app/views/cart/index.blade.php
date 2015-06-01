@@ -1,13 +1,11 @@
 <?php 
     $counter = 1;
-    $total = 0.00;
-
 ?>
 
 <div class="container clearfix">
     <div class="row">
         <h1>Order Summary</h1>
-        {{ (isset($error_msg)) ? ("<p class='bg-danger' style='padding: 5px;'>". $error_msg ."</p>") : "" }}
+        {{ (isset($error_msg)) ? ("<p class='bg-danger error-msg'>". $error_msg ."</p>") : "" }}
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -34,10 +32,7 @@
                             {{ ($item->products->getOldPrice() != 0.00) ? ("<strike>£ " . $item->products->getOldPrice() . "</strike><br />"): "" }}
                             £ {{ $item->products->getPrice() }}</td>
                     </tr>
-                    <?php 
-                        $counter++; 
-                        $total += ($item->products->getPrice() * $item->getQuantity())
-                    ?>
+                    <?php $counter++; ?>
                 @endforeach
                     <tr>
                         <td colspan="4" class="text-right">

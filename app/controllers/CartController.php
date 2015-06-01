@@ -74,7 +74,10 @@ class CartController extends BaseController {
     public function showBasket($orderId) {
         $orderItems = OrderItem::with('products')->where('orderId', $orderId)->get();
         $this->layout->content = View::make('cart.index')
-                    ->with(array('items' => $orderItems, 'order_id' => $orderId));
+                    ->with(array('items' => $orderItems, 
+                                 'order_id' => $orderId, 
+                                 'total' => $this->calculateTotal($orderItems)
+                           ));
     }
     
     /**
@@ -104,6 +107,7 @@ class CartController extends BaseController {
             return Redirect::to('/basket/' . $orderDetails['orderId']);
         }
         $variables = array('items' => $orderItems,
+                           'total' => $this->calculateTotal($orderItems),
                            'order_id' => $orderDetails['orderId'],
                            'error_msg' => $message);
         

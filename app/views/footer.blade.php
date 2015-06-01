@@ -5,6 +5,6 @@
 	</div>
 </footer>
 <!-- Scripts are placed here -->
-{{ HTML::script('components/js/jquery.min.js') }}
+{{ HTML::script('components/min/jquery.min.js') }}
 {{ HTML::script('components/bootstrap/js/bootstrap.min.js') }}
-{{ HTML::script('components/js/pages.js') }}
+{{ HTML::script('components/min/main.min.js') }}

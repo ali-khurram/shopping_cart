@@ -16,6 +16,7 @@
         
         <!-- CSS are placed here -->
         {{ HTML::style('components/bootstrap/css/bootstrap.min.css') }}
+        {{ HTML::style('components/min/main.min.css') }}
         <!--[if lt IE 9]>
                 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>

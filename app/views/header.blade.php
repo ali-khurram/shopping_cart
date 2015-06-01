@@ -1,7 +1,8 @@
-<div class="navbar">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="/" class="navbar-brand">Home</a>
+<nav class="navbar">
+        <div class="container">
+                <a class="navbar-brand" href="/">Your online store</a>
+                <div class="navbar-right">
+                        <div class="container minicart"></div>
+                </div>
         </div>
-    </div>
-</div>
+</nav>

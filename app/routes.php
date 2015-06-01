@@ -24,7 +24,7 @@ Route::group(array('prefix' => '/basket'), function() {
     
     Route::get('/delete/{order_id}/{product_id}', 'CartController@deleteProduct');
     
-    Route::post('/voucher', 'VoucherController@addVoucher');
+    Route::post('/voucher', 'VoucherController@applyVoucher');
     
     Route::post('/checkout', 'CartController@checkout');
 });
