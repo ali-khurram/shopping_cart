@@ -379,32 +379,20 @@
   "css": [
     "print.less",
     "type.less",
+    "code.less",
     "grid.less",
     "tables.less",
     "forms.less",
     "buttons.less",
     "responsive-utilities.less",
-    "glyphicons.less",
-    "button-groups.less",
-    "input-groups.less",
     "navs.less",
     "navbar.less",
     "breadcrumbs.less",
-    "pagination.less",
-    "pager.less",
     "labels.less",
-    "badges.less",
-    "jumbotron.less",
     "thumbnails.less",
     "alerts.less",
-    "progress-bars.less",
-    "media.less",
-    "list-group.less",
-    "panels.less",
     "responsive-embed.less",
-    "wells.less",
     "close.less",
-    "component-animations.less",
     "modals.less"
   ],
   "js": [
@@ -421,5 +409,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=c088c69420361bebcee4"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=ac7a9df08c2a4ac03dbf"
 }
